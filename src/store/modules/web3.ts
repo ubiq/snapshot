@@ -26,7 +26,7 @@ const state = {
   balances: {},
   blockNumber: 0,
   spaces: {},
-  network: config.networks['1']
+  network: config.networks['8']
 };
 
 const mutations = {
@@ -147,7 +147,7 @@ const actions = {
     }
   },
   lookupAddress: async ({ commit }, address) => {
-    if (state.network.chainId !== 1) return;
+    if (state.network.chainId !== 8) return;
     try {
       // @ts-ignore
       const name = await providers.rpc.lookupAddress(address);
@@ -158,7 +158,7 @@ const actions = {
     }
   },
   resolveName: async ({ commit }, name) => {
-    if (state.network.chainId !== 1) return;
+    if (state.network.chainId !== 8) return;
     try {
       // @ts-ignore
       const address = await providers.rpc.resolveName(name);

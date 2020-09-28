@@ -57,7 +57,7 @@ export default {
     spaces() {
       if (!this.web3.spaces) return {};
       const spaces =
-        this.web3.network.chainId === 1
+        this.web3.network.chainId === 8
           ? homepage
           : Object.keys(this.web3.spaces);
       const list = spaces.map(key => ({
